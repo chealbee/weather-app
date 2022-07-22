@@ -1,0 +1,64 @@
+@import "../../styles//variables.scss";
+@import "../../styles//mixins.scss";
+
+.air-card {
+   @include box;
+   padding: 20px;
+   height: 100%;
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: space-between;
+   width: 273px;
+   &__head {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+   }
+   &__title {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 28px;
+      color: $base-color;
+      text-transform: uppercase;
+      span {
+         color: $blue-color;
+      }
+   }
+   &__rigth {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+   }
+   &__capture {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      color: $text-color;
+   }
+   &__text {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: right;
+      color: $text-color;
+      width: 112px;
+   }
+   &__side {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $blue-color;
+      li {
+         display: flex;
+         margin-bottom: 10px;
+         width: 82px;
+         overflow: hidden;
+         word-wrap: none;
+      }
+      span {
+         font-weight: 300;
+         color: $text-color;
+      }
+   }
+}
