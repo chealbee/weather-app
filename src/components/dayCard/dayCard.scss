@@ -1,0 +1,83 @@
+@import "../../styles//mixins.scss";
+@import "../../styles//variables.scss";
+
+.weather-card {
+   @include box;
+   width: 435px;
+   height: 231px;
+   padding: $pd;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.weather-card__title {
+   color: rgb(255, 255, 255);
+   font-weight: 800;
+   font-size: 30px;
+   line-height: 35px;
+   text-transform: uppercase;
+   span {
+      color: $blue-color;
+   }
+}
+
+.weather-card__article {
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 16px;
+   color: $text-color;
+}
+
+.heding-Card__text {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.heding-Card {
+   display: flex;
+   justify-content: space-between;
+}
+
+.weather-card__more-info {
+   display: flex;
+   flex-direction: column;
+   p {
+      font-weight: 300;
+      font-size: 19px;
+      line-height: 22px;
+      color: $base-color;
+      font-weight: 300;
+      &:not(:last-child) {
+         margin-bottom: 7px;
+      }
+      span {
+         color: $blue-color;
+      }
+   }
+}
+
+.weather-card__temprite {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+.weather-card__bottom {
+   align-items: flex-end;
+   justify-content: space-between;
+   display: flex;
+}
+
+.temprite {
+   font-weight: 800;
+   font-size: 32px;
+   line-height: 38px;
+   color: $base-color;
+}
+.feels {
+   font-weight: 300;
+   font-size: 15px;
+   line-height: 18px;
+   color: $text-color;
+}

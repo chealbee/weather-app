@@ -1,12 +1,10 @@
 import { FC } from "react";
-import Button from "./components/UI/butoon/Button";
-import Input from "./components/UI/input/Input";
+import DayCard from "./components/dayCard/DayCard";
 
 const App: FC = () => {
    return (
       <>
-         <Button text="serch" type="search" />
-         <Input placeholder="input" />
+         <div className="container"></div>
       </>
    );
 };
