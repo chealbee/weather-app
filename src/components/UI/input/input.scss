@@ -1,0 +1,21 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.input {
+   @include box;
+   color: white;
+   padding: 5px 18px;
+   height: 29px;
+   font-weight: 400;
+   font-size: 15px;
+   transition: all 0.3s ease 0s;
+   width: 100%;
+   outline: 1px solid rgba(0, 0, 0, 0);
+   &::placeholder {
+      color: white;
+   }
+   &:focus {
+      outline: 1px solid $blue-color;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+   }
+}

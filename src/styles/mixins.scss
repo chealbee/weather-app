@@ -1,1 +1,7 @@
 @import "./variables.scss";
+
+@mixin box {
+   box-shadow: $bxsh;
+   background: $bg-color;
+   border-radius: $brr;
+}
