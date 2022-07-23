@@ -3,12 +3,12 @@
 
 .air-card {
    @include box;
-   padding: 20px;
-   height: 100%;
-   display: flex;
-   flex-direction: row-reverse;
-   justify-content: space-between;
-   width: 273px;
+   &__wraper {
+      padding: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+   }
    &__head {
       display: inline-flex;
       flex-direction: column;
