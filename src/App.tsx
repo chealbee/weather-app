@@ -1,11 +1,11 @@
 import { FC } from "react";
 import AirIndex from "./components/airIndex/AirIndex";
 import DayCard from "./components/dayCard/DayCard";
-import SmoleCard from "./components/smoleCard/SmoleCard";
 import Button from "./components/UI/butoon/Button";
 import Input from "./components/UI/input/Input";
 import logo from "./img/logo.svg";
 import bgImage from "./img/coouds.jpg";
+import Swiper from "./components/swiper/Swiper";
 
 const App: FC = () => {
    return (
@@ -23,9 +23,7 @@ const App: FC = () => {
                <AirIndex />
             </div>
             <div className="slider">
-               <SmoleCard />
-               <SmoleCard />
-               <SmoleCard />
+               <Swiper />
             </div>
          </div>
          <img className="body-bg" src={bgImage} alt="bg-image" />

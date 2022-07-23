@@ -22,16 +22,16 @@
       height: 40px;
       width: 40px;
    }
-}
-.small-card__title {
-   font-weight: 800;
-   font-size: 20px;
-   line-height: 23px;
-   text-transform: uppercase;
-   margin-bottom: 8px;
-}
-.small-card__temprite {
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 19px;
+   &__title {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 23px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+   }
+   &__temprite {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+   }
 }
