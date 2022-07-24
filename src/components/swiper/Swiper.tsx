@@ -20,11 +20,20 @@ const CSwiper: FC = () => {
          </div>
          <Swiper
             modules={[Navigation]}
-            spaceBetween={30}
-            slidesPerView={3}
             navigation={{
                prevEl: ".prev",
                nextEl: ".next",
+            }}
+            breakpoints={{
+               0: { slidesPerView: 1.05, spaceBetween: 10 },
+               350: { slidesPerView: 1.1, spaceBetween: 10 },
+               400: { slidesPerView: 1.5, spaceBetween: 10 },
+               450: { slidesPerView: 1.7, spaceBetween: 10 },
+               510: { slidesPerView: 2, spaceBetween: 20 },
+               540: { slidesPerView: 2.2, spaceBetween: 20 },
+               580: { slidesPerView: 2.4, spaceBetween: 20 },
+               650: { slidesPerView: 2.7, spaceBetween: 20 },
+               720: { slidesPerView: 3, spaceBetween: 30 },
             }}
          >
             <SwiperSlide>

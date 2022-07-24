@@ -31,10 +31,15 @@
    justify-content: space-between;
    gap: 17px;
    margin-bottom: 30px;
+   @media (max-width: 768px) {
+      flex-wrap: wrap;
+   }
 }
 
-body {
+#root {
    position: relative;
+   padding-bottom: 20px;
+   min-height: 100vh;
    .body-bg {
       position: absolute;
       width: 100%;
