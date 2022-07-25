@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import AirIndex from "./components/airIndex/AirIndex";
 import DayCard from "./components/dayCard/DayCard";
 import Button from "./components/UI/butoon/Button";
@@ -6,8 +6,14 @@ import Input from "./components/UI/input/Input";
 import logo from "./img/logo.svg";
 import bgImage from "./img/coouds.jpg";
 import Swiper from "./components/swiper/Swiper";
+import { useAppDispatch } from "./hooks/typedReduxHooks";
+import { getWeatherData } from "./store/weatherSlice";
 
 const App: FC = () => {
+   const dispatch = useAppDispatch();
+   useEffect(() => {
+      dispatch(getWeatherData());
+   }, []);
    return (
       <>
          <div className="container">

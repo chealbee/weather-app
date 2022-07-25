@@ -31,6 +31,9 @@
       font-size: 14px;
       line-height: 16px;
       color: $text-color;
+      span {
+         color: $blue-color;
+      }
    }
    &__text {
       display: flex;
@@ -77,6 +80,11 @@
    display: flex;
    justify-content: space-between;
    margin-bottom: 20px;
+   img {
+      height: 80px;
+      width: 80px;
+      transform: scale(1.4);
+   }
    &__text {
       display: flex;
       flex-direction: column;
