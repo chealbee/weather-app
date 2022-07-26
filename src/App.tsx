@@ -8,11 +8,13 @@ import bgImage from "./img/coouds.jpg";
 import Swiper from "./components/swiper/Swiper";
 import { useAppDispatch } from "./hooks/typedReduxHooks";
 import { getWeatherData } from "./store/weatherSlice";
+import { getAirIndex } from "./store/airIndexSlice";
 
 const App: FC = () => {
    const dispatch = useAppDispatch();
    useEffect(() => {
       dispatch(getWeatherData());
+      dispatch(getAirIndex());
    }, []);
    return (
       <>
