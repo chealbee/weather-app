@@ -3,9 +3,7 @@ import useInput from "../../../hooks/useInput";
 import { IInput } from "../../../types/UITypes";
 import "./input.scss";
 
-const Input: FC<IInput> = ({ placeholder, ...props }) => {
-   const { value, changeValue } = useInput();
-
+const Input: FC<IInput> = ({ placeholder, value, changeValue, ...props }) => {
    return (
       <input
          type="text"

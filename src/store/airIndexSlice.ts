@@ -25,14 +25,15 @@ const initialState: weatherState = {
    },
 };
 
-export const getAirIndex = createAsyncThunk<IINdex>(
+export const getAirIndex = createAsyncThunk<IINdex, string | undefined>(
    "airIndex/getAirIndex",
-   async () => {
+   async payload => {
+      const location = payload || "kyiv";
       const coord = await axios.get(
          "http://api.openweathermap.org/geo/1.0/direct",
          {
             params: {
-               q: "Kyiv",
+               q: location,
                limit: 1,
                appid: "dc9bbc03e96950be7ac81adda2c9181c",
             },

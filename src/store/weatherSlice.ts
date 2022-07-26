@@ -21,15 +21,16 @@ const initialState: initialWeather = {
    country: "Kyiv",
 };
 
-export const getWeatherData = createAsyncThunk<IWeather>(
+export const getWeatherData = createAsyncThunk<IWeather, string | undefined>(
    "weatherData/getWeatherData",
-   async () => {
+   async payload => {
+      const location = payload || "kyiv";
       const res = await axios.get<RootObject>(
          `https://api.openweathermap.org/data/2.5/weather`,
          {
             params: {
                appid: "dc9bbc03e96950be7ac81adda2c9181c",
-               q: "kyiv",
+               q: location,
                units: "metric",
             },
          },

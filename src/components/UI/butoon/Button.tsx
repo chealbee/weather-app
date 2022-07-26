@@ -2,25 +2,17 @@ import React, { FC } from "react";
 import { IButon } from "../../../types/UITypes";
 import "./button.scss";
 import searchIcon from "../../../img/search.svg";
-import { getWeatherData } from "../../../store/weatherSlice";
-import { useAppDispatch } from "../../../hooks/typedReduxHooks";
 
-const Button: FC<IButon> = ({ text, type, ...props }) => {
-   const dispatch = useAppDispatch();
-
+const Button: FC<IButon> = ({ text, type, onClick, ...props }) => {
    if (type === "search") {
       return (
-         <button
-            className="button"
-            {...props}
-            onClick={() => dispatch(getWeatherData())}
-         >
+         <button onClick={onClick} className="button" {...props}>
             {text} <img src={searchIcon} alt="search image" />
          </button>
       );
    }
    return (
-      <button className="button" {...props}>
+      <button onClick={onClick} className="button" {...props}>
          {text}
       </button>
    );
