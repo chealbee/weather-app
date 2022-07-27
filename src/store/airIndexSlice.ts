@@ -30,7 +30,7 @@ export const getAirIndex = createAsyncThunk<IINdex, string | undefined>(
    async payload => {
       const location = payload || "kyiv";
       const coord = await axios.get(
-         "http://api.openweathermap.org/geo/1.0/direct",
+         "https://api.openweathermap.org/geo/1.0/direct",
          {
             params: {
                q: location,
@@ -40,7 +40,7 @@ export const getAirIndex = createAsyncThunk<IINdex, string | undefined>(
          },
       );
       const res = await axios.get(
-         "http://api.openweathermap.org/data/2.5/air_pollution",
+         "https://api.openweathermap.org/data/2.5/air_pollution",
          {
             params: {
                lat: coord.data[0].lat,
