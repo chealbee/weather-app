@@ -13,7 +13,7 @@ const AirIndex: FC = () => {
                      air index: <span>{airData.data.main.aqi}</span>
                   </h2>
                   <p className="air-card__capture">
-                     {airData.data.main.aqi < 2 ? "air is good" : "air is bad"}
+                     {airData.data.main.aqi <= 2 ? "air is good" : "air is bad"}
                   </p>
                </div>
 

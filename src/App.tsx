@@ -5,13 +5,13 @@ import Button from "./components/UI/butoon/Button";
 import Input from "./components/UI/input/Input";
 import logo from "./img/logo.svg";
 import bgImage from "./img/coouds.jpg";
-import Swiper from "./components/swiper/Swiper";
 import { useAppDispatch } from "./hooks/typedReduxHooks";
 import { getWeatherData } from "./store/weatherSlice";
 import { getAirIndex } from "./store/airIndexSlice";
 import useInput from "./hooks/useInput";
 
 const App: FC = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
    const dispatch = useAppDispatch();
    const { value, changeValue } = useInput();
    useEffect(() => {
@@ -45,9 +45,6 @@ const App: FC = () => {
             <div className="main-section">
                <DayCard />
                <AirIndex />
-            </div>
-            <div className="slider">
-               <Swiper />
             </div>
          </div>
          <img className="body-bg" src={bgImage} alt="bg-image" />
